@@ -1,6 +1,6 @@
 namespace ParcelDeliverySystem;
 
-public class Parcel:IParcel
+public class StandardParcel:IParcel
 {
     public string Name { get; }
     public int ID { get; }
@@ -8,13 +8,14 @@ public class Parcel:IParcel
     public string City { get; }
     public ParcelStatus Status { get; }
 
-    public Parcel(string name, int id, string weight, string city)
+    public StandardParcel(string name, int id, string weight, string city)
     {
         Name = name;
         ID = id;
         Weight = weight;
         City = city;
+        Status = ParcelStatus.Taken;
     }
 
-    public string GetInfo() => $"Parcel {Name} has id {ID} with weight {Weight} and destination {City}";
+    public string GetInfo() => $"Standard parcel {Name} has id {ID} with weight {Weight} and destination {City}";
 }

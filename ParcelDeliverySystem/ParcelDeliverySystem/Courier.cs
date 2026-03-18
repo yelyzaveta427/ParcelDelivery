@@ -2,8 +2,15 @@ namespace ParcelDeliverySystem;
 
 public class Courier
 {
-    public int ParcelId { get; set; }
+    public int CourierId { get; set; }
     public string CourierName { get; set; }
     public string Transport { get; set; }
-    public List<IParcel> parcels = new List<IParcel>();
+
+    public Courier(int courierId, string courierName, string transport)
+    {
+        CourierId = courierId;
+        CourierName = courierName;
+        Transport = transport;
+    }
+    public List<IParcel> CourierParcels = new List<IParcel>();
 }
