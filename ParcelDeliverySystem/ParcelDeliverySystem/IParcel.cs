@@ -6,7 +6,7 @@ public interface IParcel
     string Name { get; } 
     string Weight { get; }
     string City { get; }
-    ParcelStatus Status { get; }
+    ParcelStatus Status { get; set; }
 
     string GetInfo();
 }

@@ -6,7 +6,7 @@ public class StandardParcel:IParcel
     public int ID { get; }
     public string Weight { get; }
     public string City { get; }
-    public ParcelStatus Status { get; }
+    public ParcelStatus Status { get; set; }
 
     public StandardParcel(string name, int id, string weight, string city)
     {

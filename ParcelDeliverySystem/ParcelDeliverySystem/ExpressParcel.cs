@@ -1,13 +1,12 @@
 namespace ParcelDeliverySystem;
 
-public class ExpressParcel
+public class ExpressParcel:IParcel
 {
-    private string Name { get; }
-    private int ID { get; }
-    private string Weight { get; }
-    private string City { get; }
+    public string Name { get; }
+    public int ID { get; }
+    public string Weight { get; }
+    public string City { get; }
     public ParcelStatus Status { get; set; }
-    private string ProtectionMaterial { get; set; }
     public int DaysToDeliver { get; set; }
 
     public ExpressParcel(string name, int id, string weight, string city, int daysToDeliver)
